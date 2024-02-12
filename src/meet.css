@@ -1,0 +1,41 @@
+.about-us {
+    width: 100%;
+    padding: 50px 0;
+    background: #ddd;
+  }
+  .about {
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .text {
+    width: 40%;
+  }
+h2 {
+    font-size: 90px;
+    font-weight: 600;
+    margin-top: -20px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .text p {
+    font-size: 25px;
+    line-height: 27px;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+  }
+  .pic {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+span{
+    color: yellowgreen;
+}
