@@ -1,0 +1,73 @@
+.countdown-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 200px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .countdown-container h2 {
+    color: yellowgreen; /* Change to Sage Green color */
+    margin-top: 5rem;
+    font-size: 3.3rem;
+  }
+  
+  ul {
+    background-color: #000;
+  }
+  
+  ul#countdown {
+    position: relative;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+    width: 50%;
+    margin-top: 150px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    color: #fff;
+    border: 1px dashed #adafb2;
+    border-width: 0.4px 0;
+    overflow: hidden;
+    font-weight: bold;
+  }
+  
+  ul#countdown li {
+    margin: 10px 0px;
+    padding: 0;
+    display: inline-block;
+    width: 25%;
+    font-size: 72px;
+    text-align: center;
+  }
+  
+  li#colon {
+    margin: 20px;
+    padding: 0;
+    display: inline-block;
+    width: 25%;
+    font-size: 72px;
+    font-size: 6vw;
+    text-align: center;
+  }
+  
+  ul#countdown li .label {
+    color: #adafb2;
+    font-size: 18px;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+  }
+  
+  .Register {
+    background-color: yellowgreen;
+    width: 30%;
+    margin-top: -30px;
+    margin-bottom: 60px;
+    color: #000;
+  }
+  

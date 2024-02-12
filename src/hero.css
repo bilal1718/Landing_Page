@@ -2,7 +2,7 @@
   background-image: url(https://images.unsplash.com/photo-1554692760-4b7e52978fb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #14d0f0;
+  background-color: #badc58; /* Sage Green */
   background-position: center;
   width: 100vw;
   height: 100vh;
@@ -13,7 +13,7 @@
 }
 
 .background-texture {
-  background: linear-gradient(to top, rgba(0, 20, 50, 0.9), rgba(0, 25, 25, 0.9));
+  background: linear-gradient(to top, rgba(186, 220, 88, 0.9), rgba(218, 165, 32, 0.9)); /* Sage Green and Royal Yellow */
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -43,11 +43,12 @@ h1 {
   font-weight: 900;
   font-size: 2.8rem;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #2c3e50; /* Grey */
+  font-family: 'General Sans', sans-serif;
 }
 
 .para {
-  color: #ffffff;
+  color: #2c3e50; /* Grey */
   font-size: 1.5rem;
 }
 
@@ -55,13 +56,14 @@ button {
   padding: 1.1rem 0.7rem;
   border-radius: 25px;
   border: 0;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #f1c40f; /* Royal Yellow */
+  color: #2c3e50; /* Grey */
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-size: 1.5rem;
   cursor: pointer;
   width: 80%;
+  margin-top: 20px;
 }
 
 .instructor-pic {
@@ -83,7 +85,5 @@ hr {
   bottom: 10%;
   transform: translateX(-50%);
   width: 20%;
-  border: 1px solid #ffffff;
+  border: 1px solid #2c3e50; /* Grey */
 }
-
-

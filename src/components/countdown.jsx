@@ -1,64 +1,45 @@
 import React, { useState, useEffect } from 'react';
-import "../countdown.css"; // Make sure to import your countdown styles
+import "../countdown.css";
 
 const CountdownSection = () => {
-  // Set your countdown end date and time
-  const countdownDate = new Date('2024-12-31T00:00:00').getTime();
-
-  // Calculate the remaining time
-  const calculateTimeLeft = () => {
-    const now = new Date().getTime();
-    const difference = countdownDate - now;
-
-    let days = Math.floor(difference / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-    return {
-      days,
-      hours,
-      minutes,
-      seconds
-    };
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const initialTime = 10 * 60;
+  const [timeRemaining, setTimeRemaining] = useState(initialTime);
 
   useEffect(() => {
     const countdownInterval = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
+      setTimeRemaining((prevTime) => {
+        if (prevTime === 0) {
+          clearInterval(countdownInterval);
+        } else {
+          return prevTime - 1;
+        }
+      });
     }, 1000);
 
-    return () => clearInterval(countdownInterval);
+    return () => {
+      clearInterval(countdownInterval);
+    };
   }, []);
 
+  const minutes = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
+
   return (
-    <section className="countdown-section">
-      <div className="countdown-wrap">
-        <h2>Countdown</h2>
-        <div className="countdown">
-          {/* Display your countdown here using timeLeft */}
-          <div className="time-unit">
-            <span>{timeLeft.days}</span>
-            <p>Days</p>
-          </div>
-          <div className="time-unit">
-            <span>{timeLeft.hours}</span>
-            <p>Hours</p>
-          </div>
-          <div className="time-unit">
-            <span>{timeLeft.minutes}</span>
-            <p>Minutes</p>
-          </div>
-          <div className="time-unit">
-            <span>{timeLeft.seconds}</span>
-            <p>Seconds</p>
-          </div>
-        </div>
-        <button className="countdown-button">Click Me</button>
-      </div>
-    </section>
+    <div className="countdown-container">
+      <h2>Time is Running Out <br /> Sign Up Now!</h2>
+      <ul id="countdown">
+        <li id="minutes">
+          <div className="number">{String(minutes).padStart(2, '0')}</div>
+          <div className="label">Minutes</div>
+        </li>
+        <li id="colon">:</li>
+        <li id="seconds">
+          <div className="number">{String(seconds).padStart(2, '0')}</div>
+          <div className="label">Seconds</div>
+        </li>
+      </ul>
+      <button className='Register'>Register Now at &#x20B9;499</button>
+    </div>
   );
 };
 
